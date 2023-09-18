@@ -15,7 +15,7 @@ const Nav = () => {
       const response = await getProviders();
       setProviders(response);
     };
-    // setUpapiProviders();
+    setUpapiProviders();
   }, []);
 
   return (
@@ -59,7 +59,7 @@ const Nav = () => {
                   <button
                     type="button"
                     key={provider.name}
-                    onClick={() => signIn(provider.id)}
+                    onClick={() => signIn(provider)}
                     className="black_btn "
                   >
                     Sign In
@@ -119,7 +119,7 @@ const Nav = () => {
                   <button
                     type="button"
                     key={provider.name}
-                    onClick={() => signIn(provider.id)}
+                    onClick={() => signIn(provider)}
                     className="black_btn"
                   >
                     Sign In
